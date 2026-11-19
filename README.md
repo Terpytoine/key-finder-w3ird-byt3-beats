@@ -1,23 +1,21 @@
 # Key Finder by W3ird_byt3_beats
 
-[**DOWNLOAD WINDOWS VST3 INSTALLER (.exe)**](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/download/v0.1.0-beta/Key-Finder-Setup-0.1.0.exe)
+[**DOWNLOAD WINDOWS VST3 UPDATE — 0.2.0 (.exe)**](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/download/v0.2.0-beta/Key-Finder-Setup-0.2.0.exe)
 
-[Release notes, full source and checksums](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/tag/v0.1.0-beta)
+[Release notes, complete source, checksums and sample-test limits](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/tag/v0.2.0-beta)
 
-![Native plugin preview](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/download/v0.1.0-beta/Key-Finder-preview.png)
+![Current interface](https://github.com/Terpytoine/key-finder-w3ird-byt3-beats/releases/download/v0.2.0-beta/Key-Finder-preview-0.2.0.png)
 
-Compact Windows x64 VST3 key estimator. Curved green glass, cryptid pedal artwork, Bigfoot, Freeze/Resume and optional moving fog.
+Windows x64 VST3. Darker logo greens, original cryptid background, one centered Freeze button and indicator, always-on reactive fog. The Tonal match/Fit/Ambiguous panel has been removed.
 
-**Audio stays untouched:** native 32-bit and 64-bit passthrough is tested bit-for-bit. No gain, EQ, compression, dynamics/stereo changes or added audio latency. No telemetry or audio upload.
+The detector combines whole-session harmonic note evidence with persistent candidate selection. Host BPM/signature/PPQ/bar-start information aligns updates; missing fields stay unavailable. Recent notes are pitch-class evidence, not exact MIDI transcription. Native float and double audio passes through bit-identically: no gain, EQ, dynamics/stereo changes, stretching or added audio latency.
 
-## Install in FL Studio
-
-Run the installer and approve the normal Windows administrator prompt. In FL Studio choose Options > Manage plugins, enable Verify plugins and scan. Insert Key Finder by W3ird_byt3_beats in a Mixer effect slot. Play 10-20 seconds of clear melody, chords or bass. Freeze holds the reading while analysis and sound continue. New Reading clears the evidence.
+## Install
+Run the installer; approve the normal administrator prompt. Restart FL Studio after updating an already loaded instance. Scan with Verify plugins in Options > Manage plugins, then insert Key Finder in a Mixer effect slot. Play from the beginning for at least four bars/eight seconds; twelve seconds without usable host bar timing. A consistent candidate is required, so longer listening can be necessary. Freeze holds the reading. Right-click the panel > Start new analysis after changing songs.
 
 ## Beta verification
+Native tests and pluginval level 5 pass, including 24 major/minor triads, host timing/changes/missing data, bar/seek/loop clock, stability, Freeze/recall and bit-identical 32/64-bit passthrough. Blue Turtle 77 BPM C# minor piano reaches C# minor with zero changes after its first displayed estimate in the simulated-host pass.
 
-Native tests and pluginval level 5 pass, including 72 known-key audio fixtures across three sample rates, 24 harmonic progressions, tuning offsets, silence/noise/single-note rejection, Freeze/state recall and bit-identical passthrough. These are controlled tests, not a real-song accuracy percentage. Relative keys, key changes and unusual tuning can be ambiguous. Fit is similarity, not a probability; verify by ear.
+Across twelve labeled one-pass files: four exact label matches, one relative key, three other keys and four short/unstable passes without an estimate. These labels are not independently established ground truth; the complete table and caveats are in SAMPLE_EVALUATION_0.2.0.md inside the source archive. No universal accuracy or certainty claim. Actual FL Studio acceptance and Windows DPI remain pending. The installer is unsigned.
 
-Actual FL Studio playback/automation/project reopen/export, Windows DPI and clean-machine installation acceptance remain pending. The installer is unsigned. This is a Windows VST3, not a standalone app.
-
-For complete corresponding source, use the named **Key-Finder-Source-0.1.0.zip** release asset, including the plugin, installer, tests, notices, artwork prompt and matching JUCE source. Generic GitHub tag-source archives are not the full source package for this initial release. Authored source is AGPL-3.0-only; dependency notices are included.
+The named Key-Finder-Source-0.2.0.zip asset contains complete corresponding authored source, tests, notices, prompts and exact JUCE source. Do not use the generic GitHub tag-source archive as the full source package. No Cymatics audio/MIDI is distributed. No telemetry or audio upload.
